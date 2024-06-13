@@ -3,7 +3,7 @@ Exemplo básico de programação orientada a objetos onde é implementada uma ca
 Também nesse mesmo código foi criando um DockerFile, para criação de uma imagem, sendo possível rodar essa aplicação via container Docker.
 ## Testes
 
-PacienteTesteJunit4.class
+PacienteTesteJunit5.class
 Os testes, são uma etapa muito importante do desenvolvilmento de nossas aplicações. Podemos com eles, dada uma certa entrada, garantir que a saída de um determinado método seja testada.
 Uma classe de teste, é uma classe Java qualquer, com algumas anotações, que fazer com que o compilador reconheça, por exemplo os métodos anotados com *@Test*, como um teste a ser executado.
 A anotação *@BeforeEach* é executada antes de cada teste contido na classe, podendo ser utilizada para organizar as instâncias necessárias que antecedem os testes em si.
