@@ -1,30 +1,34 @@
 package IMC;
 
 
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PacienteTesteJUnit5 {
     Paciente paciente;
     double imc;
     double altura;
     double peso;
-    @Before
+
+    @BeforeEach
     public void setUp() throws Exception {
-        altura = 0;
-        peso = 0;
-        imc = 0;
+        System.out.println("Executando antes de cada teste");
         paciente = new Paciente(altura, peso);
     }
 
     @Test
-    public void verificaDiagnostico() {
+    public void verificaErroDiagnostico() {
         paciente = new Paciente(0.0, 0.0);
+        assertEquals(0.0, paciente.calculaIMC(), 0);
         assertTrue(paciente.diagnostico().equals("Erro de cálculo de IMC"));
-        paciente = new Paciente(1.7, 70);
+    }
+
+    @Test
+    public void verificaErroIMC() {
+        paciente = new Paciente(0.0, 0.0);
+        assertEquals(0.0, paciente.calculaIMC(), 0);
     }
 
     @Test
