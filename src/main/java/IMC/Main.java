@@ -8,8 +8,7 @@ public class Main {
     static Double peso = 0.0;
     static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) {;
         Paciente p1 = new Paciente(1.77, 200);
         Paciente p2 = new Paciente(1.57, 50);
         Paciente p3 = new Paciente(1.59, 55);

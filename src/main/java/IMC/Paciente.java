@@ -22,11 +22,13 @@ public class Paciente {
     }
 
     public double calculaIMC() {
+
         if (altura != 0 && peso != 0) {
            return peso / (Math.pow(altura, 2));
         }
         else
             System.out.println("Verifique os dados do IMC");
+        String nome = "lucas";
         return 0;
     }
 
